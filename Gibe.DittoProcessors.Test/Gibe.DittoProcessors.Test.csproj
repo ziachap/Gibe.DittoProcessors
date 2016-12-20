@@ -285,6 +285,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="DittoProcessorTests\DittoProcessorTestHelpers.cs" />
+    <Compile Include="DittoProcessorTests\JsonAttributeTests.cs" />
     <Compile Include="DittoProcessorTests\PreviousNextUrlAttributeTests.cs" />
     <Compile Include="DittoProcessorTests\TestPublishedContent.cs" />
     <Compile Include="DittoProcessorTests\TestRootNodeType.cs" />

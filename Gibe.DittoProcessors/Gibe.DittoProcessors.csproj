@@ -290,6 +290,7 @@
     <Compile Include="Media\Models\MediaFileModel.cs" />
     <Compile Include="Media\Models\MediaImageModel.cs" />
     <Compile Include="Processors\CanonicalUrlAttribute.cs" />
+    <Compile Include="Processors\JsonAttribute.cs" />
     <Compile Include="Processors\MultiNodeTreePickerAttribute.cs" />
     <Compile Include="Processors\ChildrenAttribute.cs" />
     <Compile Include="Processors\ArchetypeMailAddressAttribute.cs" />

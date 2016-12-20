@@ -6,7 +6,7 @@ using NUnit.Framework;
 
 namespace Gibe.DittoProcessors.Test.DittoProcessorTests
 {
-	class PreviousNextUrlAttributeTests
+	internal class PreviousNextUrlAttributeTests
 	{
 		[SetUp]
 		public void Init()
