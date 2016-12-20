@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Net.Http;
 using System.Web;
 using System.Web.Mvc;
@@ -24,9 +25,7 @@ namespace Gibe.DittoProcessors.Processors
 
 		public override object ProcessValue()
 		{
-			var canonicalUrl = _httpContextBase.Request.Url?.Scheme + "://"
-			                   + _httpContextBase.Request.Url?.Host
-			                   + _httpContextBase.Request.Url?.AbsolutePath;
+			var url = _httpContextBase.Request.Url?.GetLeftPart(UriPartial.Path);
 
 			var queryParameters = _httpContextBase.Request.Url.ParseQueryString();
 
@@ -35,7 +34,7 @@ namespace Gibe.DittoProcessors.Processors
 				var nextPage = int.Parse(queryParameters[_pageAlias]) - 1;
 				if (nextPage <= 0) return string.Empty;
 				queryParameters[_pageAlias] = nextPage.ToString();
-				return canonicalUrl + "?" + queryParameters;
+				return url + "?" + queryParameters;
 			}
 
 			return string.Empty;
