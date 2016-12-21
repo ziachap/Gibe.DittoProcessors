@@ -13,6 +13,6 @@ namespace Gibe.DittoProcessors.Processors
 			_skip = skip;
 		}
 
-		public override object ProcessValue() => ((IEnumerable<IPublishedContent>) Value).Skip((int) _skip);
+		public override object ProcessValue() => ((IEnumerable<IPublishedContent>) Value)?.Skip((int) _skip);
 	}
 }

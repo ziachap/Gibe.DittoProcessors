@@ -33,5 +33,21 @@ namespace Gibe.DittoProcessors.Test.DittoProcessorTests
 			var result = (IEnumerable<IPublishedContent>) TakeAttribute(take, contentSet).ProcessValue();
 			Assert.IsTrue(result.Last().Id == contentSet.Take((int) take).Last().Id);
 		}
+
+		[Test]
+		public void Skip_Returns_Null_When_Content_Set_Is_Null()
+		{
+			var skip = (uint)2;
+			var result = (IEnumerable<IPublishedContent>)SkipAttribute(skip, null).ProcessValue();
+			Assert.AreEqual(null, result);
+		}
+
+		[Test]
+		public void Take_Returns_Null_When_Content_Set_Is_Null()
+		{
+			var take = (uint)2;
+			var result = (IEnumerable<IPublishedContent>)TakeAttribute(take, null).ProcessValue();
+			Assert.AreEqual(null, result);
+		}
 	}
 }

@@ -288,6 +288,7 @@
     <Compile Include="DittoProcessorTests\JsonAttributeTests.cs" />
     <Compile Include="DittoProcessorTests\PreviousNextUrlAttributeTests.cs" />
     <Compile Include="DittoProcessorTests\SkipTakeAttributeTests.cs" />
+    <Compile Include="DittoProcessorTests\SortAttributeTests.cs" />
     <Compile Include="DittoProcessorTests\TestPublishedContent.cs" />
     <Compile Include="DittoProcessorTests\TestRootNodeType.cs" />
     <Compile Include="DittoProcessorTests\WithinDateRangeAttributeTests.cs" />

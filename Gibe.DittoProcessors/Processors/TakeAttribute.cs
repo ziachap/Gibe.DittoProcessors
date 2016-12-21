@@ -13,6 +13,6 @@ namespace Gibe.DittoProcessors.Processors
 			_take = take;
 		}
 
-		public override object ProcessValue() => ((IEnumerable<IPublishedContent>) Value).Take((int) _take);
+		public override object ProcessValue() => ((IEnumerable<IPublishedContent>) Value)?.Take((int) _take);
 	}
 }
