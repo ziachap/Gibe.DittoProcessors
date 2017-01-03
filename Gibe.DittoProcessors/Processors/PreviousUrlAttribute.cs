@@ -31,9 +31,9 @@ namespace Gibe.DittoProcessors.Processors
 
 			if (queryParameters.AllKeys.Contains(_pageAlias))
 			{
-				var nextPage = int.Parse(queryParameters[_pageAlias]) - 1;
-				if (nextPage <= 0) return string.Empty;
-				queryParameters[_pageAlias] = nextPage.ToString();
+				var previousPage = int.Parse(queryParameters[_pageAlias]) - 1;
+				if (previousPage <= 0) return string.Empty;
+				queryParameters[_pageAlias] = previousPage.ToString();
 				return url + "?" + queryParameters;
 			}
 

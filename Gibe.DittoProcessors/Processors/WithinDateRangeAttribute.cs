@@ -28,7 +28,7 @@ namespace Gibe.DittoProcessors.Processors
 		}
 
 		/// <summary>
-		///     Returns all published content where the specified Umbraco property is  a valid date time between
+		///     Returns all published content where the specified Umbraco property is a valid date time between
 		///     the specified start and end dates
 		/// </summary>
 		/// <param name="rootNodeType">INodeType of the root node of the Umbraco site</param>
