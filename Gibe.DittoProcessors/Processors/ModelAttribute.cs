@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Web.Mvc;
 using Gibe.DittoServices.ModelConverters;
 using Umbraco.Core.Models;
@@ -25,10 +24,6 @@ namespace Gibe.DittoProcessors.Processors
 
 		public override object ProcessValue()
 		{
-			if (Value is IEnumerable<IPublishedContent>)
-			{
-				return _modelConverter.ToModel(_modelType, (IEnumerable<IPublishedContent>)Value);
-			}
 			return Value is IPublishedContent
 				? _modelConverter.ToModel(_modelType, (IPublishedContent)Value)
 				: null;

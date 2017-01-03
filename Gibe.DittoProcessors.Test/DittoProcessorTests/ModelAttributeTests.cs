@@ -25,13 +25,7 @@ namespace Gibe.DittoProcessors.Test.DittoProcessorTests
 		private MockRepository _repository;
 		private Mock<IModelConverter> _modelConverter;
 
-		private ModelAttribute ModelAttribute(Type type)
-			=> new ModelAttribute(_modelConverter.Object, type) {Value = null};
-
-		private ModelAttribute ModelAttribute(Type type, IPublishedContent value)
-			=> new ModelAttribute(_modelConverter.Object, type) {Value = value};
-
-		private ModelAttribute ModelAttribute(Type type, IEnumerable<IPublishedContent> value)
+		private ModelAttribute ModelAttribute(Type type, object value)
 			=> new ModelAttribute(_modelConverter.Object, type) {Value = value};
 
 		public class TestModel
@@ -41,11 +35,12 @@ namespace Gibe.DittoProcessors.Test.DittoProcessorTests
 		}
 
 		[Test]
-		public void Model_Attribute_Returns_Null_When_Converting_Null()
+		public void Model_Attribute_Returns_Null_When_Not_Converting_IPublishedContent()
 		{
+			var content = new TestModel();
 			var resultType = typeof(TestModel);
 
-			var result = (IEnumerable<TestModel>) ModelAttribute(resultType).ProcessValue();
+			var result = (TestModel) ModelAttribute(resultType, content).ProcessValue();
 
 			Assert.AreEqual(result, null);
 		}
@@ -64,24 +59,6 @@ namespace Gibe.DittoProcessors.Test.DittoProcessorTests
 			var result = (TestModel) ModelAttribute(resultType, content).ProcessValue();
 
 			Assert.AreEqual(content.Name, result.Name);
-		}
-
-		[Test]
-		public void Model_Attribute_Returns_Valid_Model_When_Converting_Multiple_IPublishedContent()
-		{
-			var content = DittoProcessorTestHelpers.RootNode.Descendants().ToList();
-			var resultType = typeof(TestModel);
-			var resultModel = content.Select(x => new TestModel
-			{
-				Name = x.Name
-			});
-
-			_modelConverter.Setup(x => x.ToModel(It.IsAny<Type>(), It.IsAny<IEnumerable<IPublishedContent>>()))
-				.Returns(resultModel);
-			var result = (IEnumerable<TestModel>) ModelAttribute(resultType, content).ProcessValue();
-
-			result.Zip(content, (first, second) => new {Result = first.Name, Content = second.Name})
-				.ForEach(x => Assert.AreEqual(x.Content, x.Result));
 		}
 	}
 }
