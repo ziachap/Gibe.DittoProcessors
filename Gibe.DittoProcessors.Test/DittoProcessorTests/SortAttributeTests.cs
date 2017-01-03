@@ -13,6 +13,9 @@ namespace Gibe.DittoProcessors.Test.DittoProcessorTests
 		private SortAttribute SortAttribute(string propertyAlias, object value)
 			=> new SortAttribute(propertyAlias) {Value = value};
 
+		private SortDescendingAttribute SortDescendingAttribute(string propertyAlias, object value)
+			=> new SortDescendingAttribute(propertyAlias) { Value = value };
+
 		[Test]
 		public void Sort_Attribute_Does_Nothing_When_Content_Set_Is_Empty()
 		{
@@ -49,6 +52,18 @@ namespace Gibe.DittoProcessors.Test.DittoProcessorTests
 			Assert.AreEqual("Andrew", result.First().Name);
 			Assert.AreEqual("Zia", result.Last().Name);
 			Assert.AreEqual(contentSet.OrderBy(x => x.Name), result);
+		}
+
+		[Test]
+		public void Sort_Descending_Attribute_Sorts_Content_By_Descending_Name_When_Property_Alias_Equals_Name()
+		{
+			var propertyAlias = "name";
+			var contentSet = DittoProcessorTestHelpers.RootNode.Descendants();
+			var result = (IEnumerable<IPublishedContent>)SortDescendingAttribute(propertyAlias, contentSet).ProcessValue();
+
+			Assert.AreEqual("Andrew", result.Last().Name);
+			Assert.AreEqual("Zia", result.First().Name);
+			Assert.AreEqual(contentSet.OrderByDescending(x => x.Name), result);
 		}
 	}
 }

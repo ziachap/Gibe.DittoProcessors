@@ -319,6 +319,7 @@
     <Compile Include="Processors\RelatedLinksAttribute.cs" />
     <Compile Include="Processors\SkipAttribute.cs" />
     <Compile Include="Processors\SortAttribute.cs" />
+    <Compile Include="Processors\SortDescendingAttribute.cs" />
     <Compile Include="Processors\TagsAttribute.cs" />
     <Compile Include="Processors\TakeAttribute.cs" />
     <Compile Include="Processors\TestableDittoProcessorAttribute.cs" />
