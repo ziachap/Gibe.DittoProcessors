@@ -19,6 +19,7 @@ Install via nuget ``` install-package Gibe.DittoProcessors ```
 |Json| Return the object as a JSON |
 |LinkPicker| Return the link picker data type data as LinkPickerModel |
 |MetaSEO| Return the Meta SEO data type data as MetaModel |
+|Model| Return the IPublishedContent converted to the given model. Can also be used for IEnumerable<IPublishedContent> |
 |MultiNodeTreePicker| Return the selected nodes as IEnumerable of IPublishedContent |
 |MultipleImagePicker| Return the selected images as IEnumerable of MediaImageModel |
 |Navigation| Return the Navigation |

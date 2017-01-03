@@ -287,11 +287,11 @@
     <Compile Include="DittoProcessorTests\DescendantsAttributeTests.cs" />
     <Compile Include="DittoProcessorTests\DittoProcessorTestHelpers.cs" />
     <Compile Include="DittoProcessorTests\JsonAttributeTests.cs" />
+    <Compile Include="DittoProcessorTests\ModelAttributeTests.cs" />
     <Compile Include="DittoProcessorTests\SkipTakeAttributeTests.cs" />
     <Compile Include="DittoProcessorTests\SortAttributeTests.cs" />
     <Compile Include="DittoProcessorTests\TestPublishedContent.cs" />
     <Compile Include="DittoProcessorTests\TestRootNodeType.cs" />
-    <Compile Include="DittoProcessorTests\WithinDateRangeAttributeTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -302,6 +302,10 @@
     <ProjectReference Include="..\Gibe.DittoProcessors\Gibe.DittoProcessors.csproj">
       <Project>{eb493949-bffb-4595-9a71-db9c641a795a}</Project>
       <Name>Gibe.DittoProcessors</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gibe.DittoServices\Gibe.DittoServices.csproj">
+      <Project>{71E1A2DB-2246-4177-9A0B-83301B8C1BD1}</Project>
+      <Name>Gibe.DittoServices</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

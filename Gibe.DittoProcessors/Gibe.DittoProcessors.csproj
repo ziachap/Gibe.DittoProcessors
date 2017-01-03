@@ -293,6 +293,7 @@
     <Compile Include="Processors\CheckboxListAttribute.cs" />
     <Compile Include="Processors\DescendantsAttribute.cs" />
     <Compile Include="Processors\JsonAttribute.cs" />
+    <Compile Include="Processors\ModelAttribute.cs" />
     <Compile Include="Processors\MultiNodeTreePickerAttribute.cs" />
     <Compile Include="Processors\ChildrenAttribute.cs" />
     <Compile Include="Processors\ArchetypeMailAddressAttribute.cs" />
@@ -324,7 +325,6 @@
     <Compile Include="Processors\UrlAttribute.cs" />
     <Compile Include="Processors\UserPickerAttribute.cs" />
     <Compile Include="Processors\VideoPickerAttribute.cs" />
-    <Compile Include="Processors\WithinDateRangeAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
