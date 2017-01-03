@@ -313,9 +313,7 @@
     <Compile Include="Processors\MultipleImagePickerAttribute.cs" />
     <Compile Include="Processors\MultipleTextstringAttribute.cs" />
     <Compile Include="Processors\NavigationAttribute.cs" />
-    <Compile Include="Processors\NextUrlAttribute.cs" />
     <Compile Include="Processors\ParentAttribute.cs" />
-    <Compile Include="Processors\PreviousUrlAttribute.cs" />
     <Compile Include="Processors\RelatedLinksAttribute.cs" />
     <Compile Include="Processors\SkipAttribute.cs" />
     <Compile Include="Processors\SortAttribute.cs" />
