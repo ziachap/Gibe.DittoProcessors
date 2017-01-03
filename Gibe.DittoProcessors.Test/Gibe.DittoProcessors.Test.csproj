@@ -284,7 +284,6 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="DittoProcessorTests\DescendantsAttributeTests.cs" />
     <Compile Include="DittoProcessorTests\DittoProcessorTestHelpers.cs" />
     <Compile Include="DittoProcessorTests\JsonAttributeTests.cs" />
     <Compile Include="DittoProcessorTests\ModelAttributeTests.cs" />
