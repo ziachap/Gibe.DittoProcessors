@@ -21,6 +21,7 @@ Install via nuget ``` install-package Gibe.DittoProcessors ```
 |MultiNodeTreePicker| Return the selected nodes as IEnumerable of IPublishedContent |
 |MultipleImagePicker| Return the selected images as IEnumerable of MediaImageModel |
 |Navigation| Return the Navigation |
+|Nodes| Return an enumerable of IPublishedContent using Examine to search for particular nodes |
 |RelatedLinks| Return related links as ```RelatedLinkModel``` |
 |Skip| Return an enumerable of IPublishedContent after skipping the given number of elements |
 |Sort| Return an enumerable of IPublishedContent after sorting by ascending order on a given Umbraco property |
