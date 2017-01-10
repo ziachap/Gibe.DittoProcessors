@@ -5,7 +5,7 @@ using Umbraco.Core.Models;
 
 namespace Gibe.DittoProcessors.Test.DittoProcessorTests
 {
-	internal class TestRootNodeType : INodeType
+	internal class FakeRootNodeType : INodeType
 	{
 		public IPublishedContent FindNode(IEnumerable<IPublishedContent> rootNodes)
 		{

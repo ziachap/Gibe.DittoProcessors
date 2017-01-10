@@ -297,8 +297,8 @@
     <Compile Include="DittoProcessorTests\NodesAttributeTests.cs" />
     <Compile Include="DittoProcessorTests\SkipTakeAttributeTests.cs" />
     <Compile Include="DittoProcessorTests\SortAttributeTests.cs" />
-    <Compile Include="DittoProcessorTests\TestPublishedContent.cs" />
-    <Compile Include="DittoProcessorTests\TestRootNodeType.cs" />
+    <Compile Include="DittoProcessorTests\FakePublishedContent.cs" />
+    <Compile Include="DittoProcessorTests\FakeRootNodeType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

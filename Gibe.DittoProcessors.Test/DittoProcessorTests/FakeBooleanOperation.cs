@@ -1,3 +1,4 @@
+using System;
 using Examine.SearchCriteria;
 
 namespace Gibe.DittoProcessors.Test.DittoProcessorTests
@@ -6,22 +7,22 @@ namespace Gibe.DittoProcessors.Test.DittoProcessorTests
 	{
 		public IQuery And()
 		{
-			throw new System.NotImplementedException();
+			throw new NotImplementedException();
 		}
 
 		public IQuery Or()
 		{
-			throw new System.NotImplementedException();
+			throw new NotImplementedException();
 		}
 
 		public IQuery Not()
 		{
-			throw new System.NotImplementedException();
+			throw new NotImplementedException();
 		}
 
 		public ISearchCriteria Compile()
 		{
-			throw new System.NotImplementedException();
+			throw new NotImplementedException();
 		}
 	}
 }

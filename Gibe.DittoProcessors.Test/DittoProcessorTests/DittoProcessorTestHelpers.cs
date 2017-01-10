@@ -9,7 +9,7 @@ namespace Gibe.DittoProcessors.Test.DittoProcessorTests
 	{
 		private static readonly IEnumerable<IPublishedContent> MoreChildren = new[]
 		{
-			new TestPublishedContent
+			new FakePublishedContent
 			{
 				Id = 4,
 				DocumentTypeAlias = "yellow",
@@ -17,7 +17,7 @@ namespace Gibe.DittoProcessors.Test.DittoProcessorTests
 				CreateDate = new DateTime(2015, 2, 1),
 				Children = Enumerable.Empty<IPublishedContent>()
 			},
-			new TestPublishedContent
+			new FakePublishedContent
 			{
 				Id = 5,
 				DocumentTypeAlias = "blue",
@@ -29,7 +29,7 @@ namespace Gibe.DittoProcessors.Test.DittoProcessorTests
 
 		private static readonly IEnumerable<IPublishedContent> RootChildren = new[]
 		{
-			new TestPublishedContent
+			new FakePublishedContent
 			{
 				Id = 1,
 				Name = "Zia",
@@ -37,7 +37,7 @@ namespace Gibe.DittoProcessors.Test.DittoProcessorTests
 				CreateDate = new DateTime(2016, 2, 1),
 				Children = Enumerable.Empty<IPublishedContent>()
 			},
-			new TestPublishedContent
+			new FakePublishedContent
 			{
 				Id = 2,
 				Name = "Andrew",
@@ -45,7 +45,7 @@ namespace Gibe.DittoProcessors.Test.DittoProcessorTests
 				CreateDate = new DateTime(2014, 2, 1),
 				Children = Enumerable.Empty<IPublishedContent>()
 			},
-			new TestPublishedContent
+			new FakePublishedContent
 			{
 				Id = 3,
 				Name = "Steve",
@@ -55,7 +55,7 @@ namespace Gibe.DittoProcessors.Test.DittoProcessorTests
 			}
 		};
 
-		public static readonly IPublishedContent RootNode = new TestPublishedContent
+		public static readonly IPublishedContent RootNode = new FakePublishedContent
 		{
 			Id = 24,
 			Name = "Root",

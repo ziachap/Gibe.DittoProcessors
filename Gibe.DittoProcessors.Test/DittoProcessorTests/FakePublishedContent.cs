@@ -5,7 +5,7 @@ using Umbraco.Core.Models.PublishedContent;
 
 namespace Gibe.DittoProcessors.Test.DittoProcessorTests
 {
-	internal class TestPublishedContent : IPublishedContent
+	internal class FakePublishedContent : IPublishedContent
 	{
 		public int GetIndex()
 		{

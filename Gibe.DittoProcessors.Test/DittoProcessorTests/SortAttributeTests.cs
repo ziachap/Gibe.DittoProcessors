@@ -14,7 +14,7 @@ namespace Gibe.DittoProcessors.Test.DittoProcessorTests
 			=> new SortAttribute(propertyAlias) {Value = value};
 
 		private SortDescendingAttribute SortDescendingAttribute(string propertyAlias, object value)
-			=> new SortDescendingAttribute(propertyAlias) { Value = value };
+			=> new SortDescendingAttribute(propertyAlias) {Value = value};
 
 		[Test]
 		public void Sort_Attribute_Does_Nothing_When_Content_Set_Is_Empty()
@@ -38,7 +38,7 @@ namespace Gibe.DittoProcessors.Test.DittoProcessorTests
 		public void Sort_Attribute_Returns_Null_When_Content_Set_Is_Null()
 		{
 			var propertyAlias = string.Empty;
-			var result = (IEnumerable<IPublishedContent>)SortAttribute(propertyAlias, null).ProcessValue();
+			var result = (IEnumerable<IPublishedContent>) SortAttribute(propertyAlias, null).ProcessValue();
 			Assert.AreEqual(null, result);
 		}
 
@@ -59,7 +59,7 @@ namespace Gibe.DittoProcessors.Test.DittoProcessorTests
 		{
 			var propertyAlias = "name";
 			var contentSet = DittoProcessorTestHelpers.RootNode.Descendants();
-			var result = (IEnumerable<IPublishedContent>)SortDescendingAttribute(propertyAlias, contentSet).ProcessValue();
+			var result = (IEnumerable<IPublishedContent>) SortDescendingAttribute(propertyAlias, contentSet).ProcessValue();
 
 			Assert.AreEqual("Andrew", result.Last().Name);
 			Assert.AreEqual("Zia", result.First().Name);

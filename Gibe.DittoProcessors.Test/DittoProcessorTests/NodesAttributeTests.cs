@@ -36,7 +36,7 @@ namespace Gibe.DittoProcessors.Test.DittoProcessorTests
 			var key = "docTypeAlias";
 			var value = "page";
 
-			var node = new TestPublishedContent
+			var node = new FakePublishedContent
 			{
 				Id = 123,
 				DocumentTypeAlias = value

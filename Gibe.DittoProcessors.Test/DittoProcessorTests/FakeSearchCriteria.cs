@@ -142,12 +142,14 @@ namespace Gibe.DittoProcessors.Test.DittoProcessorTests
 			throw new NotImplementedException();
 		}
 
-		public IBooleanOperation GroupedFlexible(IEnumerable<string> fields, IEnumerable<BooleanOperation> operations, params string[] query)
+		public IBooleanOperation GroupedFlexible(IEnumerable<string> fields, IEnumerable<BooleanOperation> operations,
+			params string[] query)
 		{
 			throw new NotImplementedException();
 		}
 
-		public IBooleanOperation GroupedFlexible(IEnumerable<string> fields, IEnumerable<BooleanOperation> operations, params IExamineValue[] query)
+		public IBooleanOperation GroupedFlexible(IEnumerable<string> fields, IEnumerable<BooleanOperation> operations,
+			params IExamineValue[] query)
 		{
 			throw new NotImplementedException();
 		}
@@ -163,6 +165,7 @@ namespace Gibe.DittoProcessors.Test.DittoProcessorTests
 		}
 
 		public BooleanOperation BooleanOperation { get; }
+
 		public ISearchCriteria RawQuery(string query)
 		{
 			throw new NotImplementedException();
